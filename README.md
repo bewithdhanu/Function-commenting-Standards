@@ -33,20 +33,13 @@ Classes:
  Code changes inside functions:
  ```
  /**
- * Short description for class
- *
- * Long description for class (if any)...
- *
- * @author          Developer Name <developer@domain.com>
- * @date            @date_with_timezone@
- * @change          Golbal/Region
- * @indicator       Start of change
+ * Developer Name <developer@domain.com> | @date_with_timezone | @change | Short description for class
+ * Start of change
  */ 
+ 
  ...Code here...
- /**
- * @author          Developer Name <developer@domain.com>
- * @indicator       End of change
- */
+ 
+ /** End of change | Developer Name <developer@domain.com> */
  ```
  Examples:
  ```
@@ -106,12 +99,8 @@ class Blog extends CI_Controller {
                         foreach ( $requiredArray as $eachitem ) {
                         
                             /**
-                             * some description about code change
-                             *
-                             * @author          Dhanu K <dhanu@returntrucks.com>
-                             * @date            2020-03-34 12:25:11PM IST
-                             * @change          Golbal
-                             * @indicator       Start of change
+                             * Dhanu K <dhanu@returntrucks.com> | 2020-03-34 12:25:11PM IST | Global | Short description for the change
+                             * Start of change
                              */ 
                              
                             $explodeArray = explode( '=====', $eachitem );
@@ -121,10 +110,7 @@ class Blog extends CI_Controller {
                                 $finalArray[ $key ] = $value;
                             }
                             
-                            /**
-                             * @author          Dhanu K <dhanu@returntrucks.com>
-                             * @indicator       End of change
-                             */ 
+                            /** End of change | Dhanu K <dhanu@returntrucks.com> */ 
                              
                         }
                     }
