@@ -104,6 +104,7 @@ class Blog extends CI_Controller {
                     $requiredArray = explode( ';', $invoiceParam );
                     if ( ! empty( $requiredArray ) && sizeof( $requiredArray ) > 0 ) {
                         foreach ( $requiredArray as $eachitem ) {
+                        
                             /**
                              * some description about code change
                              *
@@ -112,16 +113,19 @@ class Blog extends CI_Controller {
                              * @change          Golbal
                              * @indicator       Start
                              */ 
+                             
                             $explodeArray = explode( '=====', $eachitem );
                             if ( ! empty( $explodeArray ) && sizeof( $explodeArray ) > 0 ) {
                                 $key                = $explodeArray[0];
                                 $value              = $explodeArray[1];
                                 $finalArray[ $key ] = $value;
                             }
+                            
                             /**
                              * @author          Dhanu K <dhanu@returntrucks.com>
                              * @indicator       End
                              */ 
+                             
                         }
                     }
                 }
