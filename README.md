@@ -5,6 +5,8 @@ Functions:
 /**
  * Something about the function
  * 
+ * Long description for class (if any)...
+ *
  * @author    Developer Name <developer@domain.com>
  * @date      @date_with_timezone@
  * @change    Golbal/Region
@@ -27,6 +29,24 @@ Classes:
  * @link            https://tms.etrucknow.com/@controller_name@
  * @authentication  Required/Not Required
  */ 
+ ```
+ Code changes inside functions:
+ ```
+ /**
+ * Short description for class
+ *
+ * Long description for class (if any)...
+ *
+ * @author          Developer Name <developer@domain.com>
+ * @date            @date_with_timezone@
+ * @change          Golbal/Region
+ * @indicator       Start
+ */ 
+ ...Code here...
+ /**
+ * @author          Developer Name <developer@domain.com>
+ * @indicator       End
+ */
  ```
  Examples:
  ```
@@ -79,9 +99,33 @@ class Blog extends CI_Controller {
          */ 
         public function second_post($id,$sort)
         {
-                $items = [];
-                // Your own code for the first_post
-                return $items;
+                $finalArray = array();
+                if ( ! empty( $invoiceParam ) && $invoiceParam != '' ) {
+                    $requiredArray = explode( ';', $invoiceParam );
+                    if ( ! empty( $requiredArray ) && sizeof( $requiredArray ) > 0 ) {
+                        foreach ( $requiredArray as $eachitem ) {
+                            /**
+                             * some description about code change
+                             *
+                             * @author          Dhanu K <dhanu@returntrucks.com>
+                             * @date            2020-03-34 12:25:11PM IST
+                             * @change          Golbal
+                             * @indicator       Start
+                             */ 
+                            $explodeArray = explode( '=====', $eachitem );
+                            if ( ! empty( $explodeArray ) && sizeof( $explodeArray ) > 0 ) {
+                                $key                = $explodeArray[0];
+                                $value              = $explodeArray[1];
+                                $finalArray[ $key ] = $value;
+                            }
+                            /**
+                             * @author          Dhanu K <dhanu@returntrucks.com>
+                             * @indicator       End
+                             */ 
+                        }
+                    }
+                }
+                return $finalArray;
         }
 }
  ```
