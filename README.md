@@ -40,12 +40,12 @@ Classes:
  * @author          Developer Name <developer@domain.com>
  * @date            @date_with_timezone@
  * @change          Golbal/Region
- * @indicator       Start
+ * @indicator       Start of change
  */ 
  ...Code here...
  /**
  * @author          Developer Name <developer@domain.com>
- * @indicator       End
+ * @indicator       End of change
  */
  ```
  Examples:
@@ -111,7 +111,7 @@ class Blog extends CI_Controller {
                              * @author          Dhanu K <dhanu@returntrucks.com>
                              * @date            2020-03-34 12:25:11PM IST
                              * @change          Golbal
-                             * @indicator       Start
+                             * @indicator       Start of change
                              */ 
                              
                             $explodeArray = explode( '=====', $eachitem );
@@ -123,7 +123,7 @@ class Blog extends CI_Controller {
                             
                             /**
                              * @author          Dhanu K <dhanu@returntrucks.com>
-                             * @indicator       End
+                             * @indicator       End of change
                              */ 
                              
                         }
